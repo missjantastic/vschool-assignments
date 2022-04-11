@@ -20,7 +20,7 @@ function whoWins(isThereKryptonite, enemy) {
     }
 };
 
-//runs battle for every 
+//runs battle for every enemy in enemies array
 for (var i = 0; i < enemies.length; i++) {
     var isThereKryptonite;
 
@@ -33,6 +33,7 @@ for (var i = 0; i < enemies.length; i++) {
     console.log(whoWins(isThereKryptonite, enemies[i]));
 }
 
+//retrieves a number indicating how attracted superman's current lover is to him
 function getLoversAttractionLevel() {
     // 1 is not at all attracted, 10 is "super" attracted...
     return Math.floor((Math.random() * 10) + 1);
