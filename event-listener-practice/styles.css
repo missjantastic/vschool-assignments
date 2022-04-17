@@ -1,0 +1,39 @@
+body{
+    height: 105vh;
+    background: black;
+}
+
+h1{
+    text-align: center;
+    background: yellow;
+}
+
+#square{
+    width: 50vw;
+    height: 50vw;
+    margin: 0 auto;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
