@@ -7,6 +7,7 @@ function addItem(evt) {
     evt.preventDefault();
 
     let newItem = document.addItem.newItem.value;
+    document.addItem.newItem.value = '';
 
     let editButton = document.createElement('button');
     editButton.innerText = 'edit';
