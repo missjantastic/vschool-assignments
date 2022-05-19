@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+
+body {
+    background-color: lightgrey;
+    font-family: 'Grape Nuts', cursive;
+    font-size: 15pt;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
 .title {
     text-align: center;
 }
 
 .main {
+    background: whitesmoke;
     border: 1px solid black;
     width: 50%;
     margin: auto;
