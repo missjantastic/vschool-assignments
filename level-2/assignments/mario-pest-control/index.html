@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mario Pest Control</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Mario Pest Control</h1>
+        </header>
+            <h1>Pest Control Receipt</h1>
+            <form name="pestForm">
+                <ul>
+                    <div class="baddieGrid">
+                        <h2>Goomba: 5 coins</h2>
+                        <img src="src/goomba.webp" class="baddiePic">
+                        <label for="goombas">Quantity: </label>
+                        <input name="goombas"/>
+                    </div>
+                    <div class="baddieGrid">
+                        <h2>Bob-omb: 7 coins</h2>
+                        <img src="src/bob-omb.webp" class="baddiePic">
+                        <label for="bobombs">Quantity: </label>
+                        <input name="bobombs"/>
+                    </div>
+                    <div class="baddieGrid">
+                        <h2>Cheep-cheep: 11 coins</h2>
+                        <img src="src/cheep-cheep.webp" class="baddiePic">
+                        <label for="cheepCheeps">Quantity: </label>
+                        <input name="cheepCheeps"/>
+                    </div>
+                </ul>
+                <button>Compute Total Price</button>
+            </form>
+            <h1 id="total">Total: </h1>
+        <footer>
+            <p>Email: mario@mariopestcontrol.com</p>
+            <p>Website: </p> <a href="index.html">mariopestcontrol.com</a>
+            <p>Address: 123 Peach Drive, Mushroom Kingdom</p>
+        </footer>
+    </body>
+    <script src="index.js" type="text/javascript"></script>
+</html>
