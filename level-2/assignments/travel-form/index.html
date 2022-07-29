@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Form</title>
+</head>
+<body>
+    <h1>Thank you for booking with Moon Kitty Airlines!</h1>
+    <p>Please fill out the folowing form to book a flight</p>
+    <form name="airline-form">
+        <h2>Basic Information</h2>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName">
+        <br>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName">
+        <br>
+        <label for="age">Age</label>
+        <input type="digit" name="age">
+        <br><br>
+        <label for="gender">Gender</label>
+        <br>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">Female</label>
+        <br>
+        <input type="radio" name="gender" value="meh.." id="meh">
+        <label for="other">Other</label>
+        <br><br>
+        <label for="travelLocation">Destination: </label>
+        <select name="travelLocation">
+            <option value="hawaii">Hawaii</option>
+            <option value="alaska">Alaska</option>
+            <option value="newYork">New York</option>
+        </select>
+        <br><br>
+        <label for="diet">Dietary Restrictions</label>
+        <br>
+        <input type="checkbox" name="diet" id="vegan" value="vegan">
+        <label for="vegan">Vegan</label>
+        <br>
+        <input type="checkbox" name="diet" id="gluten" value="gluten-free">
+        <label for="gluten">Gluten-free</label>
+        <br>
+        <input type="checkbox" name="diet" id="kosher" value="kosher">
+        <label for="paleo">Kosher</label>
+        <br>
+        <button>Submit</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>

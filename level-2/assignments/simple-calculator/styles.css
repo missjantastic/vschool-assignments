@@ -1,0 +1,22 @@
+p {
+    display: inline;
+}
+
+.section{
+    padding: 10px;
+    padding-bottom: 50px;
+    margin: 10px auto;
+    width: 500px;
+}
+
+#addSec{
+    background-color: lightpink;
+}
+
+#subSec{
+    background-color: lightgreen;
+}
+
+#mulSec{
+    background-color: lightblue;
+}
