@@ -1,0 +1,51 @@
+body{
+    height: 105vh;
+    background: black;
+}
+
+h1{
+    text-align: center;
+    background: yellow;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.square{
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    flex-grow: 1;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
