@@ -1,0 +1,87 @@
+{
+    "appetizers": [
+        {
+            "name": "jalapeno poppers",
+            "ingredients": ["jalapenos", "cream cheese", "bacon"],
+            "description": "spicy and delicious"
+        },
+        {
+            "name": "spring rolls",
+            "ingredients": ["rice paper", "shrimp", "lettuce", "bean sprouts"],
+            "description": "fresh and tasty"
+        },
+        {
+            "name": "onion rings",
+            "ingredients": ["onion", "batter"],
+            "description": "better than a wedding ring"
+        }
+    ],
+    "cold sandwiches": [
+        {
+            "name": "pb & j",
+            "ingredients": ["peanut butter", "jelly"],
+            "description": "just like your mom made it"
+        },
+        {
+            "name": "lunch meat sandwich",
+            "ingredients": ["mayo", "lettuce", "deli meat"],
+            "description": "perfect for a lunch break"
+        },        {
+            "name": "tuna salad sandwich",
+            "ingredients": ["tuna", "mayo", "pickles"],
+            "description": "fresh and fishy"
+        }
+
+    ],
+    "hot sandwiches": [
+        {
+            "name": "cuban",
+            "ingredients": ["ham", "cheese", "pickles", "mayo", "sub bread"],
+            "description": "delicious cuban sandwich"
+        },
+        {
+            "name": "toasted pb & j",
+            "ingredients": ["peanut butter", "jelly"],
+            "description": "just like your mom made it, with some added warmth"
+        },
+        {
+            "name": "grilled cheese",
+            "ingredients": ["gouda", "havarti", "cheddar", "texas toast"],
+            "description": "oh so gooey"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "brownie",
+            "ingredients": ["chocolate", "chocolate chips", "sugar", "butter"],
+            "description": "ooey gooey brownie"
+        },
+        {
+            "name": "chocolate chip cookie",
+            "ingredients": ["eggs", "butter", "sugar", "vanilla", "chocolate chips"],
+            "description": "perfect with a glass of milk"
+        },
+        {
+            "name": "ice cream",
+            "ingredients": ["milk", "cream", "vanilla", "sugar"],
+            "description": "make the hot day go away"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "lemonade",
+            "ingredients": ["lemon", "water", "sugar"],
+            "description": "fresher than a lemonade stand"
+        },
+        {
+            "name": "soda",
+            "ingredients": ["syrup", "carbon dioxide"],
+            "description": "washes down anything"
+        },
+        {
+            "name": "coffee",
+            "ingredients": ["coffee beans", "cream", "sugar"],
+            "description": "will keep you up all day... and night"
+        }
+    ]
+}
