@@ -39,13 +39,31 @@ function isValidUrl(urlString){
 
 function addNewTodo(evt) {
     evt.preventDefault();
+
+    const itemValues = {};
+
+    if (itemForm.itemTitle.value !== "") {
+        const title = itemForm.itemTitle.value;
+        itemValues.title = title;
+    }
+    if (itemForm.itemPrice.value !== "") {
+        const price = itemForm.itemPrice.value;
+        itemValues.price = price;
+    }
+    if (itemForm.itemDescription.value !== "") {
+        const description = itemForm.itemDescription.value;
+        itemValues.description = description;
+    }
+    if (itemForm.itemImage.value !== "") {
+        const image = itemForm.itemImage.value;
+        itemValues.imgUrl = image;
+    }
     
-    const newTodo = {
-            title: document.addItem.itemTitle.value,
-            price: document.addItem.itemPrice.value,
-            description: document.addItem.itemDescription.value,
-            imgUrl: document.addItem.itemImage.value,
-        }
+    createTodoItem(itemValues);
+}
+
+function createTodoItem(itemValues) {
+    const newTodo = {...itemValues};
 
     axios.post("https://api.vschool.io/janinaalvarez/todo", newTodo)
     .then(response => console.log(response.data))
