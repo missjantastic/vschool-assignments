@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Axios To Do List</title>
+</head>
+<body>
+    <div class="title-bar">
+        <h1 class="title">To Do List</h1>
+    </div>
+    <div class="main">
+        <div class="todos">
+            <div class="title-bar">
+                <h3 class="title">list of items</h3>
+            </div>
+            <ul id="list">          
+            </ul>
+        </div>
+
+        <hr>
+        <div class="title-bar">
+            <h3 class="title">Add Item</h3>
+        </div>
+        <form name="addItem" id="add-todo">
+            <label class="label" for="itemTitle">Title</label>
+            <input class="input" name="itemTitle" id="itemTitle"/>
+            <br>
+            <label class="label" for="itemPrice">Price</label>
+            <input class="input" type="number" name="itemPrice" id="itemPrie"/>
+            <br>
+            <label class="label" for="itemDescription">Description</label>
+            <input class="input" name="itemDescription" id="itemDescription"/>
+            <br>
+            <label class="label" for="itemImage">ImageUrl</label>
+            <input class="input" name="itemImage" id="itemImage"/>
+            <br>
+            <button>submit</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
