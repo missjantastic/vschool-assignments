@@ -14,11 +14,28 @@ axios.get("https://api.vschool.io/janinaalvarez/todo")
 
 
 function createTodo(todoItem) {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = '<div>'+todoItem.title+'</div>';
+    const listItem = document.createElement('label');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = todoItem._id;
+    checkbox.name = 'listItemCheckbox';
+    checkbox.value = 'completed';
+    checkbox.addEventListener('change', toggleCompletion)
+
+    listItem.appendChild(checkbox);
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'X';
+    deleteButton.id
+    deleteButton.addEventListener('click', function() {deleteItem(todoItem._id);});
+
+    listItem.appendChild(deleteButton);
+    listItem.appendChild(document.createTextNode(todoItem.title));
     if (todoItem.completed === true){
-        listItem.innerHTML = '<s><div>'+todoItem.title+'<s></div>';
-    }
+        listItem.style.setProperty('text-decoration', 'line-through');
+        checkbox.checked = true;
+    } 
+
+
     const imageURL = isValidUrl(todoItem.imgUrl);
     if (imageURL !== false) {
         const image = document.createElement('img');
@@ -35,6 +52,19 @@ function isValidUrl(urlString){
     catch(e){ 
         return false; 
     }
+}
+
+function toggleCompletion(){
+    const update = {}
+    if (this.checked){
+        update.completed = true;
+    } else {
+        update.completed = false;
+    }
+
+    axios.put(`https://api.vschool.io/janinaalvarez/todo/${this.id}`, update)
+        .then(response => console.log(response.data))
+        .catch(error => console.log(error));
 }
 
 function addNewTodo(evt) {
@@ -94,9 +124,10 @@ function addItem(evt) {
     shoppingList.appendChild(listItem);
 }
 
-function deleteItem(evt) {
-    let listItem = evt.target.parentElement;
-    listItem.remove();
+function deleteItem(id) {
+    axios.delete(`https://api.vschool.io/janinaalvarez/todo/${id}`)
+        .then(response => console.log(response))
+        .catch(error => console.log(error))
 }
 
 function editItem(evt) {
