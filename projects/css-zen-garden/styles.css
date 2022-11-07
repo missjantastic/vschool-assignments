@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'verdemoderna';
+    src: url('src/verdemoderna.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
 html {
     font-family: 'Libre Baskerville', serif;
     box-sizing: border-box;
@@ -6,6 +11,52 @@ html {
 body {
     margin: .75rem 0 0 0;
     background-color: #134347;
+}
+
+ul {
+    padding-top: 65px;
+    margin: 0px;
+}
+
+li {
+    padding: 1.5em 10%;
+    border-top: solid 1px;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 29.4% 0 14.7%;
+}
+
+.author > ul > li {
+    border-top-color: #d9e3dc;
+}
+
+.links > ul > li {
+    border-top-color: rgb(160, 185, 173);
+
+}
+
+li:first-child {
+    border-top: none;
+}
+
+a {
+    transition: all 0.25s ease-out;
+    text-decoration: none;
+    color: #0d8ba1;
+}
+
+p{
+    font-size: 1em;
+    margin: 0.75em 0;
+    line-height: 2;
+}
+
+abbr {
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
 }
 
 h1, h3 {
@@ -29,13 +80,17 @@ h2 {
 
 h3 {
     font-size: 1.8em;
+    margin: 32px 0 0 0;
+    color: #2e484c;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 ul {
     list-style-type: none;
 }
 
-button {
+.cta-button {
     background: rgba(255,255,255,0.1);
     border: none;
     border-radius: 0;
@@ -43,10 +98,74 @@ button {
     font-family: 'Julius Sans One', sans-serif;
     font-size: 1.2em;
     height: 25%;
+    transition: all 0.25s ease-out;
 }
 
-button :hover {
+.next {
+}
+
+.next {
+    content: ">";
+    font-size: 44px;
+    font-family: 'verdemoderna';
+    width: 11%
+}
+
+button:hover {
     box-shadow: inset 0 0 10px rgb(255 255 255 / 10%);
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    cursor: pointer;
+}
+
+.link-item {
+    color:#607476;
+    display: block;
+    margin-bottom: 0.25em;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.about, .participation, .requirements {
+    color: #325050;
+}
+.download-link {
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+    color: #809b7e;
+    padding: 5px;
+    transition: all 0.25s ease-out;
+}
+
+.download-link:hover {
+    color: white;
+    background-color: #4d7a86;
+}
+
+.download-link::before {
+    content: "D";
+    padding: 2px;
+    font-family: 'verdemoderna';
+    font-size: 16px;
+    color: #a9b995;
+    background: #d9e1cd;
+}
+
+.download-link:hover::before {
+    color: white;
+    background: #357d93;
+}
+
+.in-text-link {
+    color: #0d8ba1;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+}
+
+.in-text-link:hover {
+    text-decoration: underline;
 }
 
 .cta {
@@ -56,12 +175,13 @@ button :hover {
 }
 
 .view-designs {
-    width: 70%;
+    width: 50%;
     margin-right: 1px;
 }
 
-.next {
-    width: 8%;
+.icons {
+    font-family: 'verdemoderna';
+    font-size: 72px;
 }
 
 .page-title {
@@ -78,7 +198,7 @@ button :hover {
 }
 
 .header, .about, .participation, .requirements {
-    padding-left: 12rem;
+    padding-left: 10%;
     padding-right: 4rem;
     padding-top: 65px;
     padding-bottom: 65px;
@@ -92,15 +212,16 @@ button :hover {
 }
 
 .header, .cta {
-    background: #2d6360 50% 0 url(src/huntington.jpg) no-repeat;
+    background-image: url(src/huntington.jpg);
     background-size: contain;
-    background-position: 0 0, 0 0, -5px -25px, 0 50%;
     background-attachment: fixed;
     color: white;
 }
 
 .authors {
     background-color: #E5ECE8;
+    color: #c0cac3;
+    font-style: italic;
 }
 
 .participation, .links {
@@ -113,12 +234,13 @@ button :hover {
     background-color: #E5ECE8;
 }
 
-.links {
-}
-
 #credits {
     background-image: url(src/koi.jpg);
-    padding: 1em 12%;
+    padding: 2em 12%;
+    font-style: italic;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer {
@@ -128,11 +250,88 @@ button :hover {
     background-color: #134347;
 }
 
+.links{
+    background-color: rgba(110, 165, 132, 0.5);
+}
+
+.credits-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.credits-link:hover {
+    text-decoration: underline;
+}
+
+.design-name{
+    color: #607476;
+    text-decoration: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.design-name:hover, .designer-name:hover {
+    color:#49968e;
+}
+
+.designer-name {
+    color: #616857;
+    font-size: 0.9em;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
 @media (max-width: 1130px){
+    .header, .cta {
+        background-size: cover;
+        background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    }
+
+    .header {
+        text-align: center;
+    }
+    .cta {
+        width: 100%;
+        height: 70px;
+    }
+
+    .view-designs {
+        width: 90%;
+        height: 100%;
+        margin: 0px;
+    }
+
+    .next {
+        width: 10%;
+        height: 100%;
+    }
     /* use this media query to help these two cells drop to the bottom when screens are smaller */
     .authors {
-        grid-row: 9/10
+        grid-row: 9/10;
     }
+
+    .authors > ul, .links > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0; 
+    }
+    
+    .authors > ul > li, .links > ul > li {
+        margin: 0;
+        padding: 1.5em 10%;
+    }
+
+    li:nth-child(2) {
+        border-top: none;
+    }
+    
+
     .links {
         grid-row: 10/11;
     }
@@ -140,6 +339,10 @@ button :hover {
     .container {
         grid-template-columns: 1fr;
     }
+}
+
+#icon-links {
+    padding: 2em 10%;
 }
 
 /* FLEX */
@@ -152,9 +355,8 @@ button :hover {
     padding: 10px;
 }
 
-.icons > div {
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    border-radius: 50%;
+.icon:hover {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.25s ease-out;
 }
