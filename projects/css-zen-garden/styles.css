@@ -3,6 +3,14 @@
     src: url('src/verdemoderna.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }  
 
+/* || General Styles */
+
+#container {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    background-color: white;
+}
+
 html {
     font-family: 'Libre Baskerville', serif;
     box-sizing: border-box;
@@ -13,40 +21,13 @@ body {
     background-color: #134347;
 }
 
-ul {
-    padding-top: 65px;
-    margin: 0px;
-}
-
-li {
-    padding: 1.5em 10%;
-    border-top: solid 1px;
-    width: auto;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 29.4% 0 14.7%;
-}
-
-.author > ul > li {
-    border-top-color: #d9e3dc;
-}
-
-.links > ul > li {
-    border-top-color: rgb(160, 185, 173);
-
-}
-
-li:first-child {
-    border-top: none;
-}
-
 a {
     transition: all 0.25s ease-out;
     text-decoration: none;
     color: #0d8ba1;
 }
 
-p{
+p {
     font-size: 1em;
     margin: 0.75em 0;
     line-height: 2;
@@ -59,17 +40,26 @@ abbr {
     letter-spacing: 0.01em;
 }
 
+button:hover {
+    box-shadow: inset 0 0 10px rgb(255 255 255 / 10%);
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    cursor: pointer;
+}
+
+/* Headings */
 h1, h3 {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 100;
 }
 
-h1 {
+#heading--title {
     font-size: 3.2em;
     margin-bottom: 12px;
+    color: white;
 }
 
-h2 {
+#heading--subtitle {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.6em;
     font-style: italic;
@@ -86,11 +76,105 @@ h3 {
     text-transform: uppercase;
 }
 
+/* Lists */
+
 ul {
+    padding-top: 65px;
+    margin: 0px;
     list-style-type: none;
+
 }
 
-.cta-button {
+li {
+    padding: 1.5em 10%;
+    border-top: solid 1px;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 29.4% 0 14.7%;
+}
+
+.authors__list > li{
+    border-top-color: #d9e3dc;
+}
+
+.links__list > li {
+    border-top-color: rgb(160, 185, 173);
+}
+
+#authors--first-item {
+    border-top: none;
+}
+
+/* Links */
+.about--download-link {
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+    color: #809b7e;
+    padding: 5px;
+    transition: all 0.25s ease-out;
+}
+
+.about--download-link:hover {
+    color: white;
+    background-color: #4d7a86;
+}
+
+.about--download-link::before {
+    content: "D";
+    padding: 2px;
+    font-family: 'verdemoderna';
+    font-size: 16px;
+    color: #a9b995;
+    background: #d9e1cd;
+}
+
+.about--download-link:hover::before {
+    color: white;
+    background: #357d93;
+}
+
+.section--in-text-link {
+    color: #0d8ba1;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+}
+
+.section__in-text-link:hover {
+    text-decoration: underline;
+}
+
+/* || Page Header */
+
+.header, .cta {
+    background-image: url(src/huntington.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    color: white;
+}
+
+#header-symbol {
+    width: 125px;
+    height: 125px;
+    display: inline-block;
+}
+
+.heading {
+    display: inline-block;
+    position: relative;
+    top: -1rem;
+    padding-left: 2rem;
+}
+
+/* Call to Action */
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta__button {
     background: rgba(255,255,255,0.1);
     border: none;
     border-radius: 0;
@@ -101,24 +185,76 @@ ul {
     transition: all 0.25s ease-out;
 }
 
-.next {
+.cta__button--view-designs {
+    width: 50%;
+    margin-right: 1px;
 }
 
-.next {
+.cta__button--next {
     content: ">";
     font-size: 44px;
     font-family: 'verdemoderna';
     width: 11%
 }
 
-button:hover {
-    box-shadow: inset 0 0 10px rgb(255 255 255 / 10%);
-    background-color: rgba(255,255,255,0.2);
-    color: white;
-    cursor: pointer;
+/* || Main Sections */
+
+.section {
+    padding-left: 10%;
+    padding-right: 4rem;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background-color: white;
+    color: #325050;
 }
 
-.link-item {
+
+/* || Sidebar Sections */
+
+/* Background */
+.sidebar--light-green {
+    background-color: #E5ECE8;
+    color: #c0cac3;
+    font-style: italic;
+}
+
+.sidebar--bamboo-background {
+    background-image: url(src/bamboo.png);
+    background-color: rgba(138,188,159,0.5);
+    background-attachment: fixed;
+}
+
+/* Authors */
+
+.authors__design-name{
+    color: #607476;
+    text-decoration: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.authors__design-name:hover, .authors__designer-name:hover {
+    color:#49968e;
+}
+
+.authors__designer-name {
+    color: #616857;
+    font-size: 0.9em;
+    font-style: normal;
+    text-decoration: none;
+}
+
+/* Links */
+
+.links {
+    background-color: rgba(110, 165, 132, 0.5);
+}
+
+.links__link-item {
     color:#607476;
     display: block;
     margin-bottom: 0.25em;
@@ -128,120 +264,7 @@ button:hover {
     text-transform: uppercase;
 }
 
-.about, .participation, .requirements {
-    color: #325050;
-}
-.download-link {
-    font-family: 'Julius Sans One', sans-serif;
-    text-decoration: none;
-    color: #809b7e;
-    padding: 5px;
-    transition: all 0.25s ease-out;
-}
-
-.download-link:hover {
-    color: white;
-    background-color: #4d7a86;
-}
-
-.download-link::before {
-    content: "D";
-    padding: 2px;
-    font-family: 'verdemoderna';
-    font-size: 16px;
-    color: #a9b995;
-    background: #d9e1cd;
-}
-
-.download-link:hover::before {
-    color: white;
-    background: #357d93;
-}
-
-.in-text-link {
-    color: #0d8ba1;
-    text-decoration: none;
-    transition: all 0.25s ease-out;
-}
-
-.in-text-link:hover {
-    text-decoration: underline;
-}
-
-.cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.view-designs {
-    width: 50%;
-    margin-right: 1px;
-}
-
-.icons {
-    font-family: 'verdemoderna';
-    font-size: 72px;
-}
-
-.page-title {
-    display: inline-block;
-    position: relative;
-    top: -1rem;
-    padding-left: 2rem;
-}
-
-.symbol {
-    width: 125px;
-    height: 125px;
-    display: inline-block;
-}
-
-.header, .about, .participation, .requirements {
-    padding-left: 10%;
-    padding-right: 4rem;
-    padding-top: 65px;
-    padding-bottom: 65px;
-    background-color: white;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    background-color: white;
-}
-
-.header, .cta {
-    background-image: url(src/huntington.jpg);
-    background-size: contain;
-    background-attachment: fixed;
-    color: white;
-}
-
-.authors {
-    background-color: #E5ECE8;
-    color: #c0cac3;
-    font-style: italic;
-}
-
-.participation, .links {
-    background-image: url(src/bamboo.png);
-    background-color: rgba(138,188,159,0.5);
-    background-attachment: fixed;
-}
-
-.spacer {
-    background-color: #E5ECE8;
-}
-
-#credits {
-    background-image: url(src/koi.jpg);
-    padding: 2em 12%;
-    font-style: italic;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/* || Footer */
 
 .footer {
     grid-column: 1/-1;
@@ -250,8 +273,14 @@ button:hover {
     background-color: #134347;
 }
 
-.links{
-    background-color: rgba(110, 165, 132, 0.5);
+/* Credits */
+.credits {
+    background-image: url(src/koi.jpg);
+    padding: 2em 12%;
+    font-style: italic;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .credits-link {
@@ -264,30 +293,37 @@ button:hover {
     text-decoration: underline;
 }
 
-.design-name{
-    color: #607476;
-    text-decoration: none;
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 1.2em;
-    font-style: normal;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 0.25em;
+.icons {
+    padding: 2em 10%;
 }
 
-.design-name:hover, .designer-name:hover {
-    color:#49968e;
+.icons__list {
+    font-family: 'verdemoderna';
+    font-size: 72px;
+    /* use flexbox to make the icons behave like css zen garden's social icons */
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
 }
 
-.designer-name {
-    color: #616857;
-    font-size: 0.9em;
-    font-style: normal;
-    text-decoration: none;
+.icon__list--icon:hover {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.25s ease-out;
 }
 
+/* || Smaller Screens*/
 
 @media (max-width: 1130px){
+    /* || Page Header */
+
+    /* container could use some help so that it's children are full screen width */
+    #container {
+        grid-template-columns: 1fr;
+    }
+
     .header, .cta {
         background-size: cover;
         background-position: 0 0, 0 0, -5px -25px, 0 50%;
@@ -301,28 +337,35 @@ button:hover {
         height: 70px;
     }
 
-    .view-designs {
+    .cta__button--view-designs {
         width: 90%;
         height: 100%;
         margin: 0px;
     }
 
-    .next {
+    .cta__button--next {
         width: 10%;
         height: 100%;
     }
-    /* use this media query to help these two cells drop to the bottom when screens are smaller */
+
+    /* ||Page Sidebar */
+
+    /* make two cells drop to the bottom when screens are smaller */
     .authors {
         grid-row: 9/10;
     }
 
-    .authors > ul, .links > ul {
+    .links {
+        grid-row: 10/11;
+    }
+
+    .authors__list, .links__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 0; 
     }
     
-    .authors > ul > li, .links > ul > li {
+    .authors__list > li, .links__list > li {
         margin: 0;
         padding: 1.5em 10%;
     }
@@ -330,33 +373,4 @@ button:hover {
     li:nth-child(2) {
         border-top: none;
     }
-    
-
-    .links {
-        grid-row: 10/11;
-    }
-    /* container could use some help so that it's children are full screen width */
-    .container {
-        grid-template-columns: 1fr;
-    }
-}
-
-#icon-links {
-    padding: 2em 10%;
-}
-
-/* FLEX */
-/* use flexbox to make the icons behave like css zen garden's social icons */
-.icons {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
-
-.icon:hover {
-    color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.25s ease-out;
 }
