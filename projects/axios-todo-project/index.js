@@ -7,13 +7,13 @@ axios.get("https://api.vschool.io/janinaalvarez/todo")
     .then(response => {
         for(let i = 0; i < response.data.length; i++){
             const todoItem = response.data[i];
-            createTodo(todoItem);
+            renderTodoItem(todoItem);
         }
     })
     .catch(error => console.log(error))
 
 
-function createTodo(todoItem) {
+function renderTodoItem(todoItem) {
     const listItem = document.createElement('label');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -96,8 +96,11 @@ function createTodoItem(itemValues) {
     const newTodo = {...itemValues};
 
     axios.post("https://api.vschool.io/janinaalvarez/todo", newTodo)
-    .then(response => console.log(response.data))
+    .then(
+        response => renderTodoItem(response.data)
+)
     .catch(error => console.log(error))
+    itemForm.reset();
 }
 
 
