@@ -1,4 +1,4 @@
-let shoppingList = document.getElementById('list');
+let todoList = document.getElementById('list');
 let itemForm = document.addItem;
 
 document.addEventListener('submit', addNewTodo)
@@ -12,7 +12,10 @@ axios.get("https://api.vschool.io/janinaalvarez/todo")
     })
     .catch(error => console.log(error))
 
-
+/**
+ * Render todo item onto page
+ * @param {} todoItem 
+ */
 function renderTodoItem(todoItem) {
     const listItem = document.createElement('label');
     const checkbox = document.createElement('input');
@@ -42,9 +45,14 @@ function renderTodoItem(todoItem) {
         image.src = todoItem.imgUrl;
         listItem.appendChild(image);
     }
-    shoppingList.appendChild(listItem);
+    todoList.appendChild(listItem);
 }
 
+/**
+ * Verify whether a given image URL is valid
+ * @param {*} urlString 
+ * @returns 
+ */
 function isValidUrl(urlString){
     try { 
         return Boolean(new URL(urlString)); 
@@ -54,6 +62,9 @@ function isValidUrl(urlString){
     }
 }
 
+/**
+ * Toggle whether an item is completed or not
+ */
 function toggleCompletion(){
     const update = {}
     if (this.checked){
@@ -67,6 +78,10 @@ function toggleCompletion(){
         .catch(error => console.log(error));
 }
 
+/**
+ * Gather data to add a new todo item to the server
+ * @param {*} evt 
+ */
 function addNewTodo(evt) {
     evt.preventDefault();
 
@@ -92,6 +107,10 @@ function addNewTodo(evt) {
     createTodoItem(itemValues);
 }
 
+/**
+ * Add a new todo item to the server
+ * @param {} itemValues 
+ */
 function createTodoItem(itemValues) {
     const newTodo = {...itemValues};
 
@@ -103,67 +122,71 @@ function createTodoItem(itemValues) {
     itemForm.reset();
 }
 
-
-
-function addItem(evt) {
-    evt.preventDefault();
-
-    let newItem = document.addItem.newItem.value;
-    document.addItem.newItem.value = '';
-
-    let editButton = document.createElement('button');
-    editButton.innerText = 'edit';
-    editButton.addEventListener('click', editItem);
-
-    let deleteButton = document.createElement('button');
-    deleteButton.innerText = 'X';
-    deleteButton.addEventListener('click', deleteItem)
-
-    let listItem = document.createElement('li');
-    listItem.innerHTML = '<div>'+newItem+'</div>';
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
-
-    shoppingList.appendChild(listItem);
-}
-
+/**
+ * Delete a todo item from the server
+ * @param {} id 
+ */
 function deleteItem(id) {
     axios.delete(`https://api.vschool.io/janinaalvarez/todo/${id}`)
         .then(response => console.log(response))
         .catch(error => console.log(error))
 }
 
-function editItem(evt) {
-    let editButton = evt.target;
-    let listItem = editButton.parentElement;
-    let itemText = listItem.firstChild;
-    itemText.style.display = 'none';
-    editButton.style.display = 'none';
 
-    let editInput = document.createElement('input');
 
-    let saveButton = document.createElement('button');
-    saveButton.innerText = 'save';
-    saveButton.addEventListener('click', updateItem);
+// function addItem(evt) {
+//     evt.preventDefault();
 
-    listItem.insertBefore(saveButton, listItem.firstChild);
-    listItem.insertBefore(editInput, listItem.firstChild);
+//     let newItem = document.addItem.newItem.value;
+//     document.addItem.newItem.value = '';
 
-}
+//     let editButton = document.createElement('button');
+//     editButton.innerText = 'edit';
+//     editButton.addEventListener('click', editItem);
 
-function updateItem(evt) {
-    let saveButton = evt.target;
-    let listItem = saveButton.parentElement;
-    let editInput = listItem.firstChild;
-    let newText = editInput.value;
+//     let deleteButton = document.createElement('button');
+//     deleteButton.innerText = 'X';
+//     deleteButton.addEventListener('click', deleteItem)
 
-    editInput.remove();
-    saveButton.remove();
+//     let listItem = document.createElement('li');
+//     listItem.innerHTML = '<div>'+newItem+'</div>';
+//     listItem.appendChild(editButton);
+//     listItem.appendChild(deleteButton);
 
-    let itemText = listItem.firstChild;
-    itemText.innerText = newText;
-    let editButton = listItem.children[1];
+//     todoList.appendChild(listItem);
+// }
 
-    itemText.style.display = 'block';
-    editButton.style.display = 'inline';
-}
+// function editItem(evt) {
+//     let editButton = evt.target;
+//     let listItem = editButton.parentElement;
+//     let itemText = listItem.firstChild;
+//     itemText.style.display = 'none';
+//     editButton.style.display = 'none';
+
+//     let editInput = document.createElement('input');
+
+//     let saveButton = document.createElement('button');
+//     saveButton.innerText = 'save';
+//     saveButton.addEventListener('click', updateItem);
+
+//     listItem.insertBefore(saveButton, listItem.firstChild);
+//     listItem.insertBefore(editInput, listItem.firstChild);
+
+// }
+
+// function updateItem(evt) {
+//     let saveButton = evt.target;
+//     let listItem = saveButton.parentElement;
+//     let editInput = listItem.firstChild;
+//     let newText = editInput.value;
+
+//     editInput.remove();
+//     saveButton.remove();
+
+//     let itemText = listItem.firstChild;
+//     itemText.innerText = newText;
+//     let editButton = listItem.children[1];
+
+//     itemText.style.display = 'block';
+//     editButton.style.display = 'inline';
+// }
