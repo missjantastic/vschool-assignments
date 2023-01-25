@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.square-grid {
+    display: grid;
+    width: 70%;
+    margin: 50px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.square {
+    background-color: red;
+    height: 500px;
+    border: solid 1px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.pink {
+    background-color: pink;
+}
