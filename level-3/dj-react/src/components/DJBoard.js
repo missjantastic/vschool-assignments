@@ -9,7 +9,6 @@ export default function DJBoard(){
 
     function smallTimeDJ(){
         const firstColor = colors[0];
-        console.log(firstColor);
         if (firstColor === 'white'){
             setColors(['black', 'black', 'black', 'black'])
         } else {
