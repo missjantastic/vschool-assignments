@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.spread {
+    grid-column: 1 / -1;
+}
+
+.name-badge-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.name-badge-form > input, .name-badge-form > textarea {
+    border: 1.5px solid black;
+}
+
+.name-badge-form--submit {
+    margin: 0 40%;
+}
+
+.name-badge{
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.name-badge--title {
+    background-color: grey;
+    color: white;
+    font-size: 1.25em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+}
+
+.name-badge--data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.name-badge--data-description {
+    grid-column: 1 / -1;
+    padding: 20px;
+    border: 1.5px solid black;
+}
