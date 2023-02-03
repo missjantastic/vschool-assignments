@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid navy;
+}
+
+.input--options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.input--angle * {
+    display: inline;
+}
+
+.gradient-block {
+    height: 200px;
+}
+
+.gradient-code {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+}
