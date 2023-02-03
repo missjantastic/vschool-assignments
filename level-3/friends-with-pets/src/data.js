@@ -41,7 +41,7 @@ const friends = [
         },{
           name: "Anna",
           breed: "persian cat",
-          profilePic: 'https://unsplash.com/photos/0EMQbQQ7JvA'
+          profilePic: 'https://source.unsplash.com/AGehl6k8xVo'
         }
       ]
     },{
@@ -64,7 +64,7 @@ const friends = [
         },{
           name: "oscar",
           breed: "sphynx cat",
-          profilePic: 'https://unsplash.com/photos/BqIWI6FS240'
+          profilePic: 'https://source.unsplash.com/WUt9P_0fEP8'
         }
       ]
     }

@@ -1,7 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    background-color: lightpink;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 55px;
+    color: #4894ff;
+    border: 1.5px dashed #4894ff;
+}
+
+.friend {
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #4894ff;
+    color: #4894ff;
+    border-radius: 10px;
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+
+}
+
+.friend--info{
+    position: relative;
+    border-bottom: 1.5px dashed #4894ff;
+    margin-bottom: 10px;
+}
+
+.friend--info-text {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    white-space: nowrap;
+}
+
+.friend--age{
+    display: inline;
+}
+
+.friend--pets {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
 .friend--pic {
     width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pet {
+    width: 120px;
+    background-color: lightpink;
+    padding: 10px;
+    border-radius: 5px;
+    color: #19355d;
 }
 
 .pet--pic {
     width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
 }
+
+.pet--name {
+    font-size: 1.25em;
+}
+
+.pet--breed {
+    font-size: .75em;
+}
+

@@ -10,11 +10,16 @@ export default function Friend(props){
     })
 
     return(
-        <div>
-            <img src={props.profilePic} className="friend--pic"/>
-            <h1>{props.name}</h1>
-            <h2>(Age: {props.age})</h2>
-            {pets}
+        <div className='friend'>
+            <div className='friend--info'>
+                <img src={props.profilePic} className="friend--pic"/>
+                <div className='friend--info-text'>
+                    <h2 className='friend--info-text'>{props.name}  (Age: {props.age})</h2>
+                </div>
+            </div>
+            <div className='friend--pets'>
+                {pets}
+            </div>
         </div>
     )
 }
