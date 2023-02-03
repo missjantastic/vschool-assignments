@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F55A5A;
+    background-color: #8d8d8d;
     height: 55px;
 }
 
@@ -32,11 +32,14 @@ nav > h1 {
 
 .card {
     display: flex;
-    margin: 40px;
+    margin: 5px;
     gap: 20px;
     font-size: 11px;
     padding-bottom: 18px;
     border-bottom: 1px solid #F5F5F5;
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .card h1 {
@@ -68,4 +71,30 @@ nav > h1 {
 .card--description {
     margin-top: 13px;
     line-height: 150%;
+}
+
+.card--badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.winter {
+    background-color:#b0e9fe
+}
+
+.spring {
+    background-color: #ffc3f4;
+}
+
+.summer {
+    background-color: #9fffa4;
+}
+
+.fall {
+    background-color: #ffbb91;
 }

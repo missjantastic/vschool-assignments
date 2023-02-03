@@ -5,7 +5,7 @@ export default function Nav(){
     return(
         <nav className="nav">
             <Logo />
-            <h1>my travel journal</h1>
+            <h1>vacation spots</h1>
         </nav>
     )
 }
