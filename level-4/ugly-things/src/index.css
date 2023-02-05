@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(66, 66, 71);
+    color: white;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: rgb(66, 66, 71);
+    color: white;
+    padding: .5em;
+    margin: .5em;
+}
+
+.navbar {
+    background-color: rgb(66, 66, 71);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.submission-form {
+    padding: 10px;
+    background-color: rgb(89, 89, 96);
+    color: white;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.ugly-things {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    width: 700px;
+}
+
+.ugly-thing {
+    background-color: rgb(89, 89, 96);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 220px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.ugly-thing--title {
+    font-size: 1.5rem;
+}
+
+.ugly-thing--image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    align-self: flex-end;
+}
+
+.ugly-thing--description{
+    height: 50px;
+    overflow: scroll;
+}
