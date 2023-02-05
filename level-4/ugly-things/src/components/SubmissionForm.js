@@ -33,7 +33,7 @@ export default function SubmissionForm(){
 
     return(
         <div className='submission-form'>
-            <h2>Submit an Ugly Thing</h2>
+            <h2 className='submission-form--title'>Submit an Ugly Thing</h2>
             <form>
                 <input
                     value={formData.title}
@@ -53,7 +53,7 @@ export default function SubmissionForm(){
                     placeholder='Description'
                     name='description'
                 />
-                <button onClick={submitUglyThing}>Submit</button>
+                <button onClick={submitUglyThing} className='submission-form--submit-button'>Submit</button>
             </form>
         </div>
     )

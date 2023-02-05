@@ -34,6 +34,16 @@ button {
     text-align: center;
 }
 
+.submission-form--title {
+    margin-bottom: 10px;
+}
+
+.submission-form--submit-button {
+    display: block;
+    margin: 10px auto;
+
+}
+
 .ugly-things {
     display: flex;
     gap: 10px;
