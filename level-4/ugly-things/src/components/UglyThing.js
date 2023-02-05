@@ -29,6 +29,11 @@ export default function UglyThing(props){
         toggleEditForm();
     }
 
+    function cancelEdit(evt){
+        evt.preventDefault();
+        toggleEditForm();
+    }
+
     return(
         <div className='ugly-thing'>
             <h1 className='ugly-thing--title'>{title}</h1>
@@ -55,6 +60,7 @@ export default function UglyThing(props){
                         name='description'
                     />
                     <button onClick={submitEdit}>Edit</button>
+                    <button onClick={cancelEdit}>Cancel</button>
                 </form> : 
                 <div className='ugly-thing--options'>
                     <button onClick={toggleEditForm}>Edit Post</button>
